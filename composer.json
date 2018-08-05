@@ -1,6 +1,7 @@
 {
     "name": "xenomorph/xenomorph-models-cryptography",
     "description": "Xenomorph's Framework Cryptographic Models",
+    "keywords": ["php freamwork", "framework", "xenomorph"],
     "type": "library",
     "require": {
         "xenomorph/xenomorph-system-core": "dev-master"
@@ -12,5 +13,11 @@
             "email": "mickaelpollet@gmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+      "classmap": [
+        "models/"
+      ]
+    },
+    "version": "1.0.0"
 }
