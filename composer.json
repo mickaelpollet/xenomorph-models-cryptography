@@ -1,0 +1,16 @@
+{
+    "name": "xenomorph/xenomorph-models-cryptography",
+    "description": "Xenomorph's Framework Cryptographic Models",
+    "type": "library",
+    "require": {
+        "xenomorph/xenomorph-system-core": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mickaël POLLET",
+            "email": "mickaelpollet@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

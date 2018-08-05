@@ -1,0 +1,113 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "86a9fdefc6431b9b06947af94fc0d677",
+    "packages": [
+        {
+            "name": "twbs/bootstrap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "2c2ac3356425e192f7537227508c809a14aa5850"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/2c2ac3356425e192f7537227508c809a14aa5850",
+                "reference": "2c2ac3356425e192f7537227508c809a14aa5850",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
+            ],
+            "time": "2017-10-04T07:51:34+00:00"
+        },
+        {
+            "name": "xenomorph/xenomorph-system-core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mickaelpollet/xenomorph-system-core.git",
+                "reference": "d6c50af110d83dc20cdf887e0a1e09b841082ac2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mickaelpollet/xenomorph-system-core/zipball/d6c50af110d83dc20cdf887e0a1e09b841082ac2",
+                "reference": "d6c50af110d83dc20cdf887e0a1e09b841082ac2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "twbs/bootstrap": "^3.3@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "models/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mickaël POLLET",
+                    "email": "mickaelpollet@gmail.com"
+                }
+            ],
+            "description": "Xenomorph's Framework and Libraries Core",
+            "keywords": [
+                "framework",
+                "php freamwork",
+                "xenomorph"
+            ],
+            "time": "2018-05-29T09:43:48+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "xenomorph/xenomorph-system-core": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
