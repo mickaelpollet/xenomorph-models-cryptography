@@ -3,9 +3,6 @@
     "description": "Xenomorph's Framework Cryptographic Models",
     "keywords": ["php freamwork", "framework", "xenomorph"],
     "type": "library",
-    "require": {
-        "xenomorph/xenomorph-system-core": "dev-master"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -14,10 +11,14 @@
         }
     ],
     "minimum-stability": "dev",
+    "require": {
+      "php":">=5.5.0",
+      "xenomorph/xenomorph-system-core": ">=1.0.0"
+    },
     "autoload": {
       "classmap": [
         "models/"
       ]
     },
-    "version": "1.0.0"
+    "version": "1.2.0"
 }

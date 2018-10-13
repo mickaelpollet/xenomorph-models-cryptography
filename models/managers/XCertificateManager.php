@@ -5,7 +5,7 @@
  * @author: 	Mickaël POLLET
  *************************************/
 
-class XCertificateManager
+class XCertificateManager extends XClassManager
 {
 
   /******************************************************/
@@ -173,7 +173,6 @@ class XCertificateManager
 
       return TRUE;
     }
-
 
 
   /************************************************************/

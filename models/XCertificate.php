@@ -18,17 +18,17 @@ class XCertificate extends XClass
 
 	// Déclaration des propriétés
   public function setClassProperties() {
-    $this->property('certificate',    'string');    // Hash du bloc
-    $this->property('autority',       'XCertificate');    // Hash du bloc
-    $this->property('dn',             'array');    // Hash du bloc
-    $this->property('csr',            'string');    // Hash du bloc
-    $this->property('publicKey',      'string');    // Hash du bloc
-    $this->property('privateKey',     'string');    // Hash du
-    $this->property('password',       'string');    // Hash du
-    $this->property('validity',       'string');    // Hash du bloc
-    $this->property('serial',         'string');    // Hash du bloc
-    $this->property('openSslConfig',  'array');    // Hash du
-    $this->property('ressources',     'array');    // Hash du
+    $this->property(array('name' => 'certificate', 'type' => 'string'));    // Hash du bloc
+    $this->property(array('name' => 'autority', 'type' => 'XCertificate'));    // Hash du bloc
+    $this->property(array('name' => 'dn', 'type' => 'array'));    // Hash du bloc
+    $this->property(array('name' => 'csr', 'type' => 'string'));    // Hash du bloc
+    $this->property(array('name' => 'publicKey', 'type' => 'string'));    // Hash du bloc
+    $this->property(array('name' => 'privateKey', 'type' => 'string'));    // Hash du
+    $this->property(array('name' => 'password', 'type' => 'string'));    // Hash du
+    $this->property(array('name' => 'validity', 'type' => 'string', 'defaultValue' => 365));    // Hash du bloc
+    $this->property(array('name' => 'serial', 'type' => 'string', 'defaultValue' => 0));    // Hash du bloc
+    $this->property(array('name' => 'openSslConfig', 'type' => 'array'));    // Hash du
+    $this->property(array('name' => 'ressources', 'type' => 'array', 'defaultValue' => array("keyPaire" => NULL, "csr" => NULL, "signedCsr" => NULL)));    // Hash du
   }
 
 
@@ -42,31 +42,6 @@ class XCertificate extends XClass
 
 	public function __construct(array $certificate = array()) {			// Constructeur dirigé vers la méthode d'hydratation
 		parent::__construct($certificate);
-
-    if (is_array($certificate) || is_a($certificate, get_class($this))) {
-      $this->hydrate($certificate);
-
-      $ressources = array(
-        "keyPaire" => NULL,
-        "csr" => NULL,
-        "signedCsr" => NULL
-      );
-
-      foreach ($ressources as $ressourcesKey => $ressourcesValue) {
-        $this->setRessources($ressourcesKey, $ressourcesValue);
-      }
-
-      if ($this->validity() === NULL) {
-        $this->setValidity(365);
-      }
-
-      if ($this->serial() === NULL) {
-        $this->setSerial(0);
-      }
-
-    } else {
-      //throw new XException('00010002', 4, array( 0 => get_class($this) ));
-    }
 	}
 
 /************************************************************/
@@ -76,21 +51,6 @@ class XCertificate extends XClass
 /*******************************************************/
 /*****************     HYDRATATION     *****************/
 /*******************************************************/
-
-  private function hydrate($certificate_datas) {
-    if (is_array($certificate_datas)) {
-      foreach ($certificate_datas as $datas_key => $datas_value) {
-        $this->{'set'.ucfirst($datas_key)}($datas_value);
-      }
-    } else if (is_a($certificate_datas, get_class($this))) {
-      foreach ($this->properties() as $properties_key => $properties_value) {
-        $this->{'set'.ucfirst($properties_value)}($certificate_datas->$properties_value());
-      }
-    } else {
-      //throw new XException('00010003', 4, array( 0 => get_class($this) ));
-    }
-  }
-
 /***********************************************************/
 /*****************     FIN HYDRATATION     *****************/
 /***********************************************************/
